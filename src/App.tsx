@@ -6,6 +6,7 @@ import { useActivity } from './contexts/ActivityContext';
 import LoginForm from './components/Auth/LoginForm';
 import Header from './components/Layout/Header';
 import Sidebar from './components/Layout/Sidebar';
+import Footer from './components/Layout/Footer';
 import ServerStatus from './components/Dashboard/ServerStatus';
 import ActivityLog from './components/Dashboard/ActivityLog';
 import FileExplorer from './components/FileManager/FileExplorer';
@@ -93,6 +94,7 @@ const AppContent: React.FC = () => {
           {renderContent()}
         </main>
       </div>
+      <Footer />
     </div>
   );
 };

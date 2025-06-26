@@ -24,8 +24,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
   ];
 
   return (
-    <aside className="w-64 bg-white border-r border-neutral-200 h-full">
-      <nav className="p-4">
+    <aside className="w-64 bg-white border-r border-neutral-200 h-full flex flex-col">
+      <nav className="p-4 flex-1">
         <ul className="space-y-2">
           {menuItems.map((item) => {
             const Icon = item.icon;
@@ -47,6 +47,23 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
           })}
         </ul>
       </nav>
+      
+      {/* Image link at bottom of sidebar */}
+      <div className="p-4 border-t border-neutral-200">
+        <a
+          href="https://bolt.new"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full hover:opacity-80 transition-opacity duration-200"
+        >
+          <img
+            src="https://raw.githubusercontent.com/kickiniteasy/bolt-hackathon-badge/refs/heads/main/src/public/bolt-badge/black_circle_360x360/black_circle_360x360.png"
+            alt="Built with Bolt.new"
+            className="w-full h-auto rounded-lg shadow-sm border border-neutral-200"
+            style={{ width: '100px', height: '100px' }}
+          />
+        </a>
+      </div>
     </aside>
   );
 };
